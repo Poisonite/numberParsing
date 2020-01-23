@@ -1,0 +1,20 @@
+html{
+    background-color: black;
+}
+body{
+    background-color: blueviolet;
+    color: white;
+}
+
+input{
+    background-color: gray;
+    color: white;
+    border-style: none;
+}
+
+#outputBox{
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    width: fit-content;
+}
