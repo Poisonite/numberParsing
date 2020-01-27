@@ -21,3 +21,19 @@ See Note 1 in script.js:
     // } else {
     //     return index;
     // }
+
+Note 2:
+Why the flag and validData vars were removed in the final itteration:
+    they no longer had any purpose. this is due to the validation logic and some other logic being rewritten to not depend on global vars but rather the actual numerical 
+    data and the code being formatted in a way where the .value bug was solved by creating a pure function which used the builtin JS logic to determine whether data should be pulled or not.
+
+Note 3:
+The purpose of running much of the repeated if logic in seperate "pure functions" is to help capsulize the code so that each part can be quickly and easily reused in later parts of the code or 
+transplanted into other projects without needing a slew of other dependancies which must also be copied over. The larger bennifit in this senario, however, is that it makes the code very easy to test with console logs and 
+to plug in static data to ensure the function works properly to a more detailed degree, this can help both with ensuring that newly written code works and also to ensure that later revisions to that code don't break existing codebases.
+In this case the use of these functions which can be called over and over helps to greatly reduce the overal repedditiveness of if statement logic and the physical line count/file size. This all works to improve overall code preformance.
+
+Note 4:
+The action functions section is ordered by the order the buttons appear in the HTML code, this is to make it easy to look from 1 document to another.
+The pure(ish) functions sections is ordered alphabetically because it's a rerlativly logical way to sort things.
+With both sections this sorting is possible because all the functions are independent of each other untill they are called, and at that point the order is illrevelant which is another nice feature of using chunk-orientated/capsulized functions
