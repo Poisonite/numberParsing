@@ -11,6 +11,8 @@ instructions.innerHTML = "Type each number you would like parsed in the boxes be
 // NOTE: 3 see txt file to learn why i perfer capalisized and pure functions and why they are used here
 // NOTE: 4 see txt file to learn why the functions are sorted the way they are
 
+//IMPORTANT: if you wish to see the console debug the code as it runs simply find the 15 instances of "// console.info" and replace them with "console.info"
+
 // !!!: Action functions section
 // These are called by the HTML and which initiate and link to many things.
 
@@ -26,7 +28,7 @@ function mean() {
 
         answer = sum / count;
         output.innerHTML = answer;
-        console.info("End of mean() Function values: ", { "myNumbers": myNumbers, "answer": answer, "sum": sum, "count": count }); //debug line for the sum, count, and answer values in 1 line so that it's easier to comment out at the end
+        // console.info("End of mean() Function values: ", { "myNumbers": myNumbers, "answer": answer, "sum": sum, "count": count }); //debug line for the sum, count, and answer values in 1 line so that it's easier to comment out at the end
     }
 
     return answer;
@@ -41,7 +43,7 @@ function middle() {
 
         answer = sum / 2;
         output.innerHTML = answer;
-        console.info("End of middle() Function values: ", { "sortedArray": sortedArray, "answer": answer, "sum": sum }); //debug line for the sortedArray and answer, and sum values in 1 line so that it's easier to comment out at the end
+        // console.info("End of middle() Function values: ", { "sortedArray": sortedArray, "answer": answer, "sum": sum }); //debug line for the sortedArray and answer, and sum values in 1 line so that it's easier to comment out at the end
     }
 
     return answer;
@@ -69,7 +71,7 @@ function mode() {
         possibleModes = updateModeDict(numArray[3], possibleModes);
         possibleModes = updateModeDict(numArray[4], possibleModes);
         possibleModes = updateModeDict(numArray[5], possibleModes);
-        console.info({ "possibleModes": possibleModes }); //sends the list of possible modes to console so the debugger can see what's happening
+        // console.info({ "possibleModes": possibleModes }); //sends the list of possible modes to console so the debugger can see what's happening
 
         // the list of possible modes that was found with the above chunk of code is then processed with another object which contains properties for getModesArrayAndMax() which finds which numbers are mode and also puts them in an array
         //an additional line is required for each number data box that is entered into the HTML since this calculates everything manually since a for loop was not promitted in the intial scope of this project
@@ -80,7 +82,7 @@ function mode() {
         modeInfo = getModesArrayAndMax(numArray[4], possibleModes, modeInfo);
         modeInfo = getModesArrayAndMax(numArray[5], possibleModes, modeInfo);
         //sends the final list of modes to the console along with the number elems in the array so the debugger can see what's happening
-        console.info({ "modesArray from modeInfo": modeInfo.modesArray, "modesArray legnth from modeInfo ": modeInfo.modesArray.length });
+        // console.info({ "modesArray from modeInfo": modeInfo.modesArray, "modesArray legnth from modeInfo ": modeInfo.modesArray.length });
 
         // if logic which uses the correct terms to describe the mode depending on how many modes are present in the nubmer set
         // CRED: info on what "mode" is, on a math basics level was sourced from "https://www.mathsisfun.com/definitions/mode.html" && "https://www.ducksters.com/kidsmath/mean_median_mode_range.php"
@@ -95,7 +97,7 @@ function mode() {
         }
 
         output.innerHTML = answer; //outputs the modes along with whatever message is appropiate to the HTML output/answer box
-        console.info("End of mode() Function values: ", { "answer": answer }); //debug line for the answer value to match format of other comments and to look fancy in console
+        // console.info("End of mode() Function values: ", { "answer": answer }); //debug line for the answer value to match format of other comments and to look fancy in console
     }
 
     return answer;
@@ -114,7 +116,7 @@ function range() {
 
         answer = maxVal - minVal;
         output.innerHTML = answer;
-        console.info("End of range() Function values: ", { "myNumbers": myNumbers, "answer": answer, "minVal": minVal, "maxVal": maxVal }); //debug line for the myNumbers, minVal, maxVal and answer values in 1 line so that it's easier to comment out at the end
+        // console.info("End of range() Function values: ", { "myNumbers": myNumbers, "answer": answer, "minVal": minVal, "maxVal": maxVal }); //debug line for the myNumbers, minVal, maxVal and answer values in 1 line so that it's easier to comment out at the end
     }
 
     return answer;
@@ -135,7 +137,7 @@ function orderLH() {
 
         answer = sortedArray;
         output.innerHTML = answer;
-        console.info("End of orderLH() Function values: ", { "myNumbers": myNumbers, "answer": answer, "numArray": numArray }); //debug line for the myNumbers, numArray, maxVal and answer values in 1 line so that it's easier to comment out at the end
+        // console.info("End of orderLH() Function values: ", { "myNumbers": myNumbers, "answer": answer, "numArray": numArray }); //debug line for the myNumbers, numArray, maxVal and answer values in 1 line so that it's easier to comment out at the end
     }
 
     return answer;
@@ -151,7 +153,7 @@ function smallestNumber() {
 
         answer = Math.min(myNumbers.number1, myNumbers.number2, myNumbers.number3, myNumbers.number4, myNumbers.number5, myNumbers.number6);//calls the object and then the data within the object to calculate which number is the highest
         output.innerHTML = answer; //sends to HTML answer/output box
-        console.info("End of smallestNumber() Function values: ", { "myNumbers": myNumbers, "answer": answer }); //debug line for the myNumbers and answer values in 1 line so that it's easier to comment out at the end
+        // console.info("End of smallestNumber() Function values: ", { "myNumbers": myNumbers, "answer": answer }); //debug line for the myNumbers and answer values in 1 line so that it's easier to comment out at the end
     }
 
     return answer;
@@ -167,7 +169,7 @@ function largestNumber() {
 
         answer = Math.max(myNumbers.number1, myNumbers.number2, myNumbers.number3, myNumbers.number4, myNumbers.number5, myNumbers.number6);//calls the object and then the data within the object to calculate which number is the highest
         output.innerHTML = answer; //sends to HTML answer/output box
-        console.info("End of largestNumber() Function values: ", { "myNumbers": myNumbers, "answer": answer }); //debug line for the myNumbers and answer values in 1 line so that it's easier to comment out at the end
+        // console.info("End of largestNumber() Function values: ", { "myNumbers": myNumbers, "answer": answer }); //debug line for the myNumbers and answer values in 1 line so that it's easier to comment out at the end
     }
 
     return answer;
@@ -211,7 +213,7 @@ function unique() {
         }
 
         output.innerHTML = answer;
-        console.info("End of unique() Function values: ", { "myNumbers": myNumbers, "answer": answer }); //debug line for the myNumbers, and answer values in 1 line so that it's easier to comment out at the end
+        // console.info("End of unique() Function values: ", { "myNumbers": myNumbers, "answer": answer }); //debug line for the myNumbers, and answer values in 1 line so that it's easier to comment out at the end
     }
 
     return answer;
@@ -259,7 +261,7 @@ function duplicate() {
         }
 
         output.innerHTML = answer;
-        console.info("End of duplicate() Function values: ", { "myNumbers": myNumbers, "answer": answer, "numArray": numArray }); //debug line for the myNumbers, numArray, and answer values in 1 line so that it's easier to comment out at the end
+        // console.info("End of duplicate() Function values: ", { "myNumbers": myNumbers, "answer": answer, "numArray": numArray }); //debug line for the myNumbers, numArray, and answer values in 1 line so that it's easier to comment out at the end
     }
 
     return answer;
@@ -272,7 +274,7 @@ function duplicate() {
 // Cool Fact: This is a recurrsive function!
 function getIndexDeDup(index, array) {
 
-    console.info("getIndexDeDup Values: ", { "index: ": index, "array: ": array }); //this runs every time the function runs in the if statement so each itteration in the console is more sorted than the last
+    // console.info("getIndexDeDup Values: ", { "index: ": index, "array: ": array }); //this runs every time the function runs in the if statement so each itteration in the console is more sorted than the last
 
     if (array[index] === null) {//this condition checks to see if the array element provided is null, and if it is, return the index provided.
         return index;
@@ -307,7 +309,7 @@ function getNumbers() {
     }
 
     //By using a comma instead of a plus to concatanite the string and the object it's possible to have all the data in the object displayed rather than displaying the fact that an object exists
-    console.info("Numbers contained in myNumbers object: ", myNumbers); //debug line for all the numbers that were encased in the myNumbers object
+    // console.info("Numbers contained in myNumbers object: ", myNumbers); //debug line for all the numbers that were encased in the myNumbers object
     return myNumbers; //returns the object so that it can be called in other functions
 }
 
@@ -315,7 +317,7 @@ function getNumbers() {
 function getModesArrayAndMax(val, possibleModes, modeInfo) {
 
     var modeObj = possibleModes["val_" + val]; //initalizes and declares the modeObj var which stores the property from the possibleModes object which matches the formula it calculates in []
-    console.info({ "modeObj": modeObj });//logs the modeObj var to console
+    // console.info({ "modeObj": modeObj });//logs the modeObj var to console
 
     //this if statement handles actually putting the numbers which will be displayed as mode into the modesArray and ensuring duplicates don't get in, as well as ensuring that all numbers added are truly mode
     if (modeObj.count > 1) {// this condition is met if the count sub property ofo the property of possibleModes that was assigned to modeObj is greater than 1 (which it always should be if updateModeDict() has run and that value has more than 1 instance)
@@ -370,7 +372,7 @@ function getSortIndex(val, array) {
         throw ("getSortIndex requires 6 or fewer array input elements"); // throw is used to push a message to the console that the code has broken and directs the debugger to this line
     }
 
-    console.info("getSortIndex Values: ", { "val": val, "array": array }); //this runs every time the function runs in the if statement so each itteration in the console is more sorted than the last
+    // console.info("getSortIndex Values: ", { "val": val, "array": array }); //this runs every time the function runs in the if statement so each itteration in the console is more sorted than the last
     // eventhough this function is not recurrsive this log runs multiple times because the data that the recurssive getIndexDeDup function runs recollects the updated dynamic data that it needs each  time it runs and part of that 
     // data collection process involves calling this function so that it has an index to to run its math from
 
