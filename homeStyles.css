@@ -1,20 +1,126 @@
+/* !!!: General styles */
 html{
     background-color: black;
+    box-sizing: border-box;
 }
 body{
-    background-color: blueviolet;
-    color: white;
+    background-color: rgb(64, 211, 162);
+    color: rgb(156, 156, 156);
+    width: 75%;
+    height: auto;
+    margin: 0px auto;
+    box-sizing: border-box;
 }
 
+/* !!!: Header styles */
+header, header h2{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+header{
+    padding: 10px 0px 0px 0px;
+    margin: 0px 15px 0px 15px;
+}
+header h2{
+    background-color: rgb(0, 255, 106);
+    padding: 0px;
+    font-size: 6em;
+    text-align: center;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 50px;
+}
+
+/* !!!: Instruction box styles */
+div#instructionsBox{
+    padding: 5px 0px;
+    margin-top: 10px;
+    margin: 0px 15px 0px 15px;
+    text-align: center;
+    width: auto;
+    
+    vertical-align: top;
+}
+div#instructionsBox h4{
+    width: fit-content;
+    margin: 0px auto;
+    background-color: rgb(127, 255, 159);
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* !!!: Form styles section */
+form{
+    padding: 0px;
+    margin: 0px 15px 0px 15px;
+}
+
+/* !!!: Input boxes style section */
+div#inputBoxesTop, div#inputBoxesBtm{
+    margin: 20px auto;
+    width: fit-content;
+}
 input{
     background-color: gray;
     color: white;
     border-style: none;
+    display: inline;
+    font-size: 1.2em;
+    margin-right: 15px;
+}
+@media only screen and (max-width: 1389px){
+    div.inputText{
+        display: auto;
+    }
 }
 
+@media only screen and (min-width: 1390px){
+    
+    div.inputText{
+        display: inline;
+    }
+}
+
+/* !!!: Answer box styles */
 #outputBox{
+    margin: 10px auto;
     border-style: solid;
     border-width: 3px;
     border-radius: 5px;
+    width: 400px;
+    padding-right: auto;
+    padding-left: auto;
+}
+#outputBox p{
+    font-size: 2em;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    vertical-align: auto;
+}
+
+
+/* !!!: Button styles */
+div#operationButtons{
     width: fit-content;
+    margin: 50px auto 25px auto;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+button{
+    margin: 0px auto;
+    margin-bottom: 5px;
+    padding: 0px;
+    font-size: 1.5em;
+    width: 280px;
+    border-radius: 25px;
+    background-color: rgba(8, 168, 34, 0.788);
+    color: rgb(231, 231, 231);
+}
+button:hover{
+    background-color: rgba(46, 255, 81, 0.897);
+    color: rgb(31, 31, 31);
 }

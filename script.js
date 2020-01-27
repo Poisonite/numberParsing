@@ -91,9 +91,9 @@ function mode() {
         } else if (modeInfo.modesArray.length === 1) {
             answer = "The mode is: " + modeInfo.modesArray;
         } else if (modeInfo.modesArray.length === 2) {
-            answer = "The bimodal are: " + modeInfo.modesArray;
+            answer = "The bimodals are: " + modeInfo.modesArray;
         } else if (modeInfo.modesArray.length > 2) {
-            answer = "The multimodal are: " + modeInfo.modesArray;
+            answer = "The multimodals are: " + modeInfo.modesArray;
         }
 
         output.innerHTML = answer; //outputs the modes along with whatever message is appropiate to the HTML output/answer box

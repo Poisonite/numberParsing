@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Number Parsing</title>
-        <link rel="stylesheet" href="homeStyles.css" />
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <h2>Number Parsing Site</h2>
-        </header>
-        <div id="instructionsBox">
-            <h4 id="instructions"></h4>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Parsing</title>
+    <link rel="stylesheet" href="homeStyles.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h2>Number Parsing Site</h2>
+    </header>
+    <div id="instructionsBox">
+        <h4 id="instructions"></h4>
+    </div>
+    <form>
+        <!-- !!!: Input Boxes -->
+        <div id="inputBoxesTop">
+            <div class="inputText">Number 1:</div>
+            <input type="number" name="firstNumber" id="first" required />
+            <div class="inputText">Number 2:</div>
+            <input type="number" name="secondNumber" id="second" required />
+            <div class="inputText">Number 3:</div>
+            <input type="number" name="thirdNumber" id="third" required />
         </div>
-        <form>
-            <!-- !!!: Input Boxes -->
-            Number 1: <br />
-            <input type="number" name="firstNumber" id="first" required /><br />
-            Number 2: <br />
-            <input type="number" name="secondNumber" id="second" required /><br />
-            Number 3: <br />
-            <input type="number" name="thirdNumber" id="third" required /><br />
-            Number 4: <br />
-            <input type="number" name="forthNumber" id="forth" required /><br />
-            Number 5: <br />
-            <input type="number" name="fifthNumber" id="fifth" required /><br />
-            Number 6: <br />
-            <input type="number" name="sixthNumber" id="sixth" required /><br />
+        <div id="inputBoxesBtm">
+            <div class="inputText">Number 4:</div>
+            <input type="number" name="forthNumber" id="forth" required />
+            <div class="inputText">Number 5:</div>
+            <input type="number" name="fifthNumber" id="fifth" required />
+            <div class="inputText">Number 6:</div>
+            <input type="number" name="sixthNumber" id="sixth" required />
+        </div>
 
-            <!-- !!!: Output box -->
-            <div id="outputBox">
-                <p id="output"></p><br />
-            </div>
+        <!-- !!!: Output box -->
+        <div id="outputBox">
+            <p id="output"></p><br />
+        </div>
 
-            <!-- !!!: Buttons here -->
-            <button type="button" name="submit" onclick="mean()">Mean</button><br />
-            <button type="button" name="submit" onclick="middle()">Middle</button><br />
-            <button type="button" name="submit" onclick="mode()">Mode</button><br />
-            <button type="button" name="submit" onclick="range()">Range</button><br />
-            <button type="button" name="submit" onclick="orderLH()">Orders Least to Highest</button><br />
-            <button type="button" name="submit" onclick="smallestNumber()">Smallest Number</button><br />
-            <button type="button" name="submit" onclick="largestNumber()">Largest Number</button><br />
-            <button type="button" name="submit" onclick="unique()">Unique</button><br />
-            <button type="button" name="submit" onclick="duplicate()">Duplicate</button><br />
-        </form>
-    </body>
+        <!-- !!!: Buttons here -->
+        <div id="operationButtons">
+            <button type="button" name="submit" onclick="mean()">Mean</button>
+            <button type="button" name="submit" onclick="middle()">Middle</button>
+            <button type="button" name="submit" onclick="mode()">Mode</button>
+            <button type="button" name="submit" onclick="range()">Range</button>
+            <button type="button" name="submit" onclick="orderLH()">Orders Least to Highest</button>
+            <button type="button" name="submit" onclick="smallestNumber()">Smallest Number</button>
+            <button type="button" name="submit" onclick="largestNumber()">Largest Number</button>
+            <button type="button" name="submit" onclick="unique()">Unique</button>
+            <button type="button" name="submit" onclick="duplicate()">Duplicate</button>
+        </div>
+    </form>
+</body>
+
 </html>
